@@ -2,6 +2,14 @@ cxx.std = latest
 
 using cxx
 
+info "cxx.target = $cxx.target, cxx.target.class = $cxx.target.class, cxx.target.cpu = $cxx.target.cpu, cxx.target.system = $cxx.target.system"
+# WebAssembly support:
+if ($cxx.target.cpu == 'wasm32')
+{
+    info "WASM: Only allow static libs."
+    bin.lib = static
+}
+
 hxx{*}: extension = hxx
 ixx{*}: extension = ixx
 txx{*}: extension = txx
