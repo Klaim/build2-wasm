@@ -31,5 +31,5 @@ int main ()
   // {
   //   assert (e.what () == string ("empty name"));
   // }
-  std::cout << "Hello!" << std::endl;
+  say_hello();
 }

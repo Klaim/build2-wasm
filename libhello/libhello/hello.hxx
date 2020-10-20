@@ -12,4 +12,6 @@ namespace hello
   //
   LIBHELLO_SYMEXPORT void
   say_hello (std::ostream&, const std::string& name);
+
+  LIBHELLO_SYMEXPORT void say_hello();
 }

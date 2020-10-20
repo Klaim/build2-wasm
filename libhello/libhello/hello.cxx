@@ -1,5 +1,6 @@
 #include <libhello/hello.hxx>
 
+#include <iostream>
 #include <ostream>
 #include <stdexcept>
 
@@ -14,4 +15,11 @@ namespace hello
 
     o << "Hello, " << n << '!' << endl;
   }
+
+
+  void say_hello()
+  {
+    std::cout << "Hello!" << std::endl;
+  }
+
 }
