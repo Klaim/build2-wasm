@@ -1,3 +1,11 @@
 import libs = libhello%lib{hello}
 
-exe{driver}: {hxx ixx txx cxx}{**} $libs testscript
+exe{driver}: {hxx ixx txx cxx}{**} $libs
+if ($cxx.target.cpu == 'wasm32')
+{
+    exe{driver}: testscript{wasm}
+}
+else
+{
+    exe{driver}: testscript{** -wasm}
+}
