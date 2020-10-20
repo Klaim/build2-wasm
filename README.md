@@ -9,6 +9,15 @@ Checked with `build2 v0.13.0`:
 3. Building should work, however running the output requires `node path/to/output/file` (which is a javascript file with a .wasm file next to that file).
     Here `node` is a `nodejs` provided by the sdk.
 
+BEWARE: on first init, you might find this issue:
+    ```
+    ╰─$ bdep init -C ./build-wasm cc --options-file ./config-wasm.options
+    initializing in project /home/klaim/work/build2-experiments/build2-wasm/
+    error: unable to parse C compiler target 'shared:INFO: (Emscripten: Running sanity checks)': missing cpu
+    info: consider using the --config-sub option
+    ```
+    I didn't find yet why this happen, but deleting the configuration dir and the `.bdep` and re-trying this command will not cause any issue from that point.
+
 BEWARE: when building from the root directory (package repository) I do not see the wasm file being generated, nor do I see some of the `info` logs I added in the project. Not sure why yet. Invoking `b` from the project directory seems to work as expected.
 
 NOTES GATHERED WHILE EXPERIMENTING
