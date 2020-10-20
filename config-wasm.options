@@ -1,3 +1,4 @@
 config.cxx = em++
 config.c = emcc
 config.bin.ar = emar
+config.cc.coptions = -s DISABLE_EXCEPTION_CATCHING=0

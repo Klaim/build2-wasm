@@ -66,3 +66,17 @@ NOTES GATHERED WHILE EXPERIMENTING
 9. I managed to make the test work by removing it's code and simply outputing `"Hello!"`, then I setup testscripts so that it works when we run `b test` or `bdep test`.
     I set it up so that if we add  non-wasm configuration, we can run the tests for both.
 
+10. The error I was seeing before when running the test was because exceptions are not even handled at all by default. I assumed they were not-caught, but it's not even the case.
+    Now I setup the test so it does what it was doing before and exceptions are handled.
+
+
+
+TODO
+----
+
+- Check that api binding to JS works as expected.
+- Output html file? Try with https://build2.org/release/0.13.0.xhtml#adhoc-recipe ?
+-
+
+- From Boris (build2):
+    > One thing that would be helpful is to produce two listings: The first is the compilation/linking commands as printed with b -vs when building your project. The second is a list of what you think they should be (i.e., how would you perform the same script manually using the canonical/recommended options, etc).
