@@ -1,11 +1,15 @@
 # build2-wasm-lib
 
+Checked with `build2 v0.13.0`:
+
 0. Install dependencies and Emscriptem SDK: run (maybe after reading) `./install_emsdk_linux.sh` to install the sdk in `./emsdk/`.
     Also `./update_emsdk_latest_stable.sh` can be run to update the sdk, it's run as part of the install.
 1. Run the `source` command at the end of the install log, or `source ./emsdk/emsdk_env.sh` (on linux). This will setup the environment the sdk needs to function.
 2. The options to use in the WASM configurations are in `config-wasm.options`, so you can do `bdep init -C build-wasm cc --options-file ./config-wasm.options`.
 3. Building should work, however running the output requires `node path/to/output/file` (which is a javascript file with a .wasm file next to that file).
     Here `node` is a `nodejs` provided by the sdk.
+
+BEWARE: when building from the root directory (package repository) I do not see the wasm file being generated, nor do I see some of the `info` logs I added in the project. Not sure why yet. Invoking `b` from the project directory seems to work as expected.
 
 NOTES GATHERED WHILE EXPERIMENTING
 ----------------------------------
