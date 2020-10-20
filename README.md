@@ -47,3 +47,4 @@ NOTES GATHERED WHILE EXPERIMENTING
 
 7. The javascript file generated should be executable using `node build-dir/.../tests/basic/driver` but currently it only triggers an exception with a number which I didn't find the signification yet. Here `node` is the `nodejs` installed through the emsdk (you can try `nodejs` instead if you want to use the system one).
 
+8. `b clean` doesnt clean the .wasm file.
