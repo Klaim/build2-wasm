@@ -6,8 +6,9 @@ Checked with `build2 v0.13.0`:
     Also `./update_emsdk_latest_stable.sh` can be run to update the sdk, it's run as part of the install.
 1. Run the `source` command at the end of the install log, or `source ./emsdk/emsdk_env.sh` (on linux). This will setup the environment the sdk needs to function.
 2. The options to use in the WASM configurations are in `config-wasm.options`, so you can do `bdep init -C build-wasm cc --options-file ./config-wasm.options`.
-3. Building should work, however running the output requires `node path/to/output/file` (which is a javascript file with a .wasm file next to that file).
+3. Building should work, testing is done through `node path/to/output/testfile` (which is a javascript file with a .wasm file next to that file).
     Here `node` is a `nodejs` provided by the sdk.
+    Currently, running `b test` or `bdep test` will run a testscript which runs `node`.
 
 BEWARE: on first init, you might find this issue:
     ```
@@ -61,3 +62,7 @@ NOTES GATHERED WHILE EXPERIMENTING
 7. The javascript file generated should be executable using `node build-dir/.../tests/basic/driver` but currently it only triggers an exception with a number which I didn't find the signification yet. Here `node` is the `nodejs` installed through the emsdk (you can try `nodejs` instead if you want to use the system one).
 
 8. `b clean` doesnt clean the .wasm file.
+
+9. I managed to make the test work by removing it's code and simply outputing `"Hello!"`, then I setup testscripts so that it works when we run `b test` or `bdep test`.
+    I set it up so that if we add  non-wasm configuration, we can run the tests for both.
+
