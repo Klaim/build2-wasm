@@ -1,0 +1,3 @@
+config.cxx = em++
+config.c = emcc
+config.bin.ar = emar
