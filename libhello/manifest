@@ -9,4 +9,4 @@ url: https://example.org/build2-wasm-lib
 email: joel@jellynote.com
 depends: * build2 >= 0.13.0
 depends: * bpkg >= 0.13.0
-#depends: libhello ^1.0.0
+depends: fmt ^7.0.0

@@ -4,6 +4,8 @@
 #include <ostream>
 #include <stdexcept>
 
+#include <fmt/format.h>
+
 using namespace std;
 
 namespace hello
@@ -13,7 +15,7 @@ namespace hello
     if (n.empty ())
       throw invalid_argument ("empty name");
 
-    o << "Hello, " << n << '!' << endl;
+    o << fmt::format("Hello, {}!", n) << std::endl;
   }
 
 
