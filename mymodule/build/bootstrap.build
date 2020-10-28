@@ -1,0 +1,7 @@
+project = mymodule
+
+using version
+using config
+using test
+using install
+using dist

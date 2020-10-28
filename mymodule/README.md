@@ -1,0 +1,3 @@
+# mymodule
+
+C++ executable

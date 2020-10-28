@@ -1,0 +1,16 @@
+
+if ($cxx.target.cpu == 'wasm32')
+    test_target = node $*
+else
+    test_target = $*
+end
+
+: basics
+:
+$test_target 'World' >'Hello, World!'
+
+: missing-name
+:
+$test_target 2>>EOE != 0
+error: missing name
+EOE
