@@ -85,3 +85,9 @@ TODO
 - From Boris (build2):
     > One thing that would be helpful is to produce two listings: The first is the compilation/linking commands as printed with b -vs when building your project. The second is a list of what you think they should be (i.e., how would you perform the same script manually using the canonical/recommended options, etc).
 
+Docs:
+-----
+
+ - Tutorial I followed: https://emscripten.org/docs/getting_started/Tutorial.html
+ - Compiler differences with clang: https://emscripten.org/docs/tools_reference/emcc.html#emccdoc
+ - Standalone WASM Module: https://github.com/emscripten-core/emscripten/wiki/WebAssembly-Standalone
