@@ -76,7 +76,6 @@ TODO
 
 - Run `source emdsk/emsdk_env.sh` automatically in the WebAssembly configuration.
     - Might require that build2 provides a way to run a `source` command and keep the environnement.
-- Make a "standalone" wasm module/library (no entry point).
 - Check that api binding to JS works as expected.
 - Find a way to use the `-o` flag from emcc.
     - Output html file? Try with https://build2.org/release/0.13.0.xhtml#adhoc-recipe ?
@@ -84,6 +83,9 @@ TODO
 
 - From Boris (build2):
     > One thing that would be helpful is to produce two listings: The first is the compilation/linking commands as printed with b -vs when building your project. The second is a list of what you think they should be (i.e., how would you perform the same script manually using the canonical/recommended options, etc).
+
+Bonus:
+ - Make a "standalone" wasm module/library.
 
 Docs:
 -----
