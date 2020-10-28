@@ -89,5 +89,6 @@ Docs:
 -----
 
  - Tutorial I followed: https://emscripten.org/docs/getting_started/Tutorial.html
+ - Building with emscriptem: https://emscripten.org/docs/compiling/Building-Projects.html#building-projects
  - Compiler differences with clang: https://emscripten.org/docs/tools_reference/emcc.html#emccdoc
  - Standalone WASM Module: https://github.com/emscripten-core/emscripten/wiki/WebAssembly-Standalone
