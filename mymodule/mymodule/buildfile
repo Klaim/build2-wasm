@@ -10,10 +10,10 @@ if($cxx.target.cpu == 'wasm32')
     exe{mymodule} : cxx{binding-wasm} # testscript{wasm} this testscript is an experiment for testing bindings
     cxx.loptions += --bind
 
-    exe{mymodule} : file{mymodule.wasm} # Force providing the .wasm generated
-    file{mymodule.wasm}:
-    {
-        install = bin/
-    }
+    # exe{mymodule} : file{mymodule.wasm} # Force providing the .wasm generated
+    # file{mymodule.wasm}:
+    # {
+    #     install = bin/
+    # }
 }
 
