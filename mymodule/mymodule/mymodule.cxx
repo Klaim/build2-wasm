@@ -1,3 +1,5 @@
+#include "mymodule.hxx"
+
 #include <iostream>
 
 int main (int argc, char* argv[])
@@ -11,4 +13,8 @@ int main (int argc, char* argv[])
   }
 
   cout << "Hello, " << argv[1] << '!' << endl;
+}
+
+namespace mymodule {
+  std::string hello(){ return "Hello!"; }
 }

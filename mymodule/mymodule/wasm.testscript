@@ -1,0 +1,4 @@
+
+: simple function binding
+node test_bindings.mjs > Hello!
+

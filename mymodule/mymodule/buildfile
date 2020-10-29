@@ -1,6 +1,19 @@
 libs =
 #import libs += libhello%lib{hello}
 
-exe{mymodule}: {hxx ixx txx cxx}{**} $libs testscript
+exe{mymodule}: {hxx ixx txx cxx}{** -binding-*} $libs testscript{main}
 
 cxx.poptions =+ "-I$out_root" "-I$src_root"
+
+if($cxx.target.cpu == 'wasm32')
+{
+    exe{mymodule} : cxx{binding-wasm} # testscript{wasm} this testscript is an experiment for testing bindings
+    cxx.loptions += --bind
+
+    exe{mymodule} : file{mymodule.wasm} # Force providing the .wasm generated
+    file{mymodule.wasm}:
+    {
+        install = bin/
+    }
+}
+

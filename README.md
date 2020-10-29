@@ -94,3 +94,11 @@ Docs:
  - Building with emscriptem: https://emscripten.org/docs/compiling/Building-Projects.html#building-projects
  - Compiler differences with clang: https://emscripten.org/docs/tools_reference/emcc.html#emccdoc
  - Standalone WASM Module: https://github.com/emscripten-core/emscripten/wiki/WebAssembly-Standalone
+
+
+Things I need from build2:
+--------------------------
+
+ - A way to specify the linking output. Boris mentionned using an ad-hoc link target for linking in general with wasm. I expect this to also allow changing the output values (maybe through properties of the target?).
+ - The generated `.wasm` file must be taken into account, in particular with `b install`.
+ -
