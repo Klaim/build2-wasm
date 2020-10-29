@@ -1,6 +1,7 @@
 # Test executables.
 #
 driver
+driver.js
 
 # Testscript output directories (can be symlinks).
 #
