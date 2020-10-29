@@ -10,3 +10,7 @@ build-*
 
 # Ignore the emsdk if installed here
 emsdk/
+
+# Work directories
+install/
+dist/
