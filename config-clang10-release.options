@@ -1,0 +1,6 @@
+--options-file config-clang10.options
+
+config.cxx.poptions = -DNDEBUG
+config.cc.coptions = -O3
+
+

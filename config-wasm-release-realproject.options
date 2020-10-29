@@ -1,5 +1,6 @@
 --options-file config-wasm.options
 
+config.cc.poptions += -DNDEBUG
 config.cc.coptions += --bind
 config.cc.coptions += -Oz -ffunction-sections -fdata-sections -Wswitch -Wunknown-escape-sequence
 config.cc.coptions += -s ERROR_ON_UNDEFINED_SYMBOLS=0 -s EXPORT_ALL=0  -s ASSERTIONS=0 -s INVOKE_RUN=0 -s DOUBLE_MODE=0

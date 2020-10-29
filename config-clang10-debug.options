@@ -1,0 +1,4 @@
+--options-file config-clang10.options
+
+config.cxx.poptions = -g
+

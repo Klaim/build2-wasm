@@ -1,0 +1,3 @@
+config.cxx = clang++-10
+config.c = clang-10
+
