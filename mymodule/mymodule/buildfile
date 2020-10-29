@@ -9,6 +9,7 @@ if($cxx.target.cpu == 'wasm32')
 {
     exe{mymodule} : cxx{binding-wasm} # testscript{wasm} this testscript is an experiment for testing bindings
     cxx.loptions += --bind
+    cxx.coptions += -s INVOKE_RUN=1 # We want to run the main() when loading and testing
 
     # exe{mymodule} : file{mymodule.wasm} # Force providing the .wasm generated
     # file{mymodule.wasm}:

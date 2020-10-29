@@ -1,0 +1,6 @@
+--options-file config-wasm.options
+
+config.cc.coptions += --bind
+config.cc.coptions += -g -O0 -ffunction-sections -fdata-sections -Wswitch -Wunknown-escape-sequence
+config.cc.coptions += -s ASSERTIONS=1 -s INVOKE_RUN=0 -s DOUBLE_MODE=0
+

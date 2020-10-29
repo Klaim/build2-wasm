@@ -14,3 +14,8 @@ exe{*}: test = true
 # The test target for cross-testing (running tests under Wine, etc).
 #
 test.target = $cxx.target
+
+if($cxx.target.cpu == 'wasm32')
+{
+    cxx.loptions += -s INVOKE_RUN=1 # Tests need to run main()
+}
